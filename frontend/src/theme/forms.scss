@@ -1,5 +1,19 @@
-@import "colors";
+@import "./colors.scss";
 
-.button-one{
-    
+.input-with-border{
+    height: 50px;
+    background: #FFFFFF;
+    border: 1px solid #A1A1A1;
+    border-radius: 46px;
+    padding: 15px 10px 15px 30px;
+}
+
+.button-gradient{
+    background: var(--gradient);
+    border-radius: 46px;
+    border: 0px;
+    outline: none;
+    height: 48px;
+    align-items: center;
+    color: var(--ibu-color-white);
 }
