@@ -9,8 +9,8 @@
           </button>
           <i class="bi bi-person-circle gray"></i>
           <ul class="dropdown-menu dro-m" aria-labelledby="dropdownMenuButton1">
-            <li><a class="dropdown-item" href="#" (click)="opneSignin()">Registarse</a></li>
-            <li><a class="dropdown-item" href="#">Iniciar Sesion</a></li>
+            <li><a class="dropdown-item" href="#" (click)="openSignin()">Iniciar Sesion</a></li>
+            <li><a class="dropdown-item" href="#" (click)="openSignup()">Registrase</a></li>
           </ul>
         </div>
       </nav>
@@ -27,8 +27,14 @@
           <img src="../assets/img/group8.png">
         </div>
       </div>
-    </section>
-    <app-signin></app-signin>
+    </section> 
+    <div *ngIf="modalSignin == true">
+      <app-signin></app-signin>
+    </div>
+    <div *ngIf="modalSignup == true">
+      
+    </div>
+    <app-signup></app-signup>
     <section class="publish-page container-fluid">
       <div class="filter-bar container d-flex justify-content-center">
         <div class="filter-item">
