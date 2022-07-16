@@ -13,8 +13,4 @@ export class AppComponent {
     
   }
 
-  opneSignin(){
-    console.log("funcionando")
-  }
-
 }

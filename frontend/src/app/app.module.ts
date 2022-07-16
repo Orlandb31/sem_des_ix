@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { SigninComponent } from './modals/signin/signin.component';
 import { SignupComponent } from './modals/signup/signup.component';
 import { PublisherEventComponent } from './pages/publisher-event/publisher-event.component';
+import { LandingComponent } from './pages/landing/landing.component';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { PublisherEventComponent } from './pages/publisher-event/publisher-event
     SigninComponent,
     SignupComponent,
     PublisherEventComponent,
+    LandingComponent,
   ],
   imports: [
     BrowserModule,
