@@ -1,13 +1,13 @@
 <div class="modals">
    <div class="container md-body bg-white">
-        <div class="modal-header p-4">
+        <div class="modal-header p-4 ms-2">
             <h5 class="modal-title">Iniciar Sesion</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" (click)="closeModal()"></button>
         </div>
-        <div class="modal-body">
-            <input type="text" class="input-with-border" id="exampleFormControlInput1" placeholder="Usuario">
-            <input type="password" class="input-with-border" id="exampleFormControlInput1" placeholder="Contraseña">
+        <div class="modal-body mt-3 p-4">
+            <input type="text" class="input-with-border mb-2" id="exampleFormControlInput1" placeholder="Usuario">
+            <input type="password" class="input-with-border mb-4" id="exampleFormControlInput1" placeholder="Contraseña">
             <button type="button" class="button-gradient">Continuar</button>
         </div>
     </div>
-</div>   
+</div> 
