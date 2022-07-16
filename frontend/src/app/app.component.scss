@@ -1,0 +1,103 @@
+@import "../theme/fonts.scss";
+
+.txt-pu{
+    margin-top: 8px;
+    padding-right: 20px; 
+}
+
+.navbar{
+    padding: 20px 0px 25px 0px;
+}
+
+.mini-menu{
+    border: 1px solid var(--ibu-color-gray);
+    border-radius: 35px;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+
+    width: fit-content;
+}
+
+.mini-menu i{
+    padding: 0px 7px;
+    gap: 11px;
+}
+
+.front-page{
+    background: url(../assets/img/citybg.jpg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 100% 170%;
+    margin-top: -135px;
+}
+
+.front-page img{
+    width: 700px;
+    margin-bottom: 100px;
+    margin-top: 150px;
+}
+
+.live{
+    margin-top: 250px;
+    float: left;
+    font-family: 'Roboto', sans-serif;
+
+    width: 500px;
+}
+
+.big-font{
+    font-size: 60px;
+}
+
+.med-font{
+    font-size: 20px;
+}
+
+.publish-page{
+    z-index: 1;
+    background-color: var(ibu-color-white-2);
+}
+
+.filter-bar{
+    margin-top: 40px;
+}
+
+.filter-item{
+    padding-inline: 60px;
+    width: 20px;
+    
+}
+
+.filter-item i{
+    font-size: 30px;
+    color: var(--ibu-color-black)
+}
+
+.filter-item span{
+    color: var(--ibu-color-black);
+    margin-left: -5px;
+}
+
+.card{
+    margin-inline: 20px;
+}
+
+.logos i{
+    padding-inline: 10px;
+    font-size: 20px;
+}
+
+.dropdown{
+    background: transparent;
+    border: 0;
+}
+
+.btn-map{
+    color: var(--ibu-color-white)
+}
+
+.dro-m{
+    justify-content: right;
+    margin-left: 88%;
+}

@@ -1,0 +1,16 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.scss";
+@import "theme/colors.scss";
+@import "theme/fonts.scss";
+@import "theme/modals.scss";
+
+body {
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

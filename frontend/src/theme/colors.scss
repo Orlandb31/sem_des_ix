@@ -1,0 +1,37 @@
+:root{
+    --ibu-color-black: #000000;
+    --ibu-color-white: #FFFFFF;
+    --ibu-color-white-2: #F5F5F5;
+    --ibu-color-gray: #A1A1A1;
+}
+
+// fonts
+.white{
+    color: var(--ibu-color-white);
+}
+
+.black{
+    color: var(--ibu-color-black);
+}
+
+.gray{
+    color: var(--ibu-color-gray);
+}
+
+// backgrounds
+
+.bg-white{
+    background-color: var(--ibu-color-white);
+}
+
+.bg-white-2{
+    background-color: var(--ibu-color-white-2);
+}
+
+.bg-gray{
+    background-color: var(--ibu-color-gray);
+}
+
+.bg-black{
+    background-color: var(--ibu-color-black);
+}
