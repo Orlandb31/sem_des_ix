@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SigninComponent } from './modals/signin/signin.component';
 import { SignupComponent } from './modals/signup/signup.component';
+import { PublisherEventComponent } from './pages/publisher-event/publisher-event.component';
 import { LandingComponent } from './pages/landing/landing.component';
 import { EventInfoComponent } from './pages/event-info/event-info.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -18,6 +19,7 @@ import { BuyConfirmComponent } from './pages/buy-confirm/buy-confirm.component';
     AppComponent,
     SigninComponent,
     SignupComponent,
+    PublisherEventComponent,
     LandingComponent,
     EventInfoComponent,
     NavbarComponent,

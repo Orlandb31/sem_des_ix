@@ -4,6 +4,7 @@ import { LandingComponent } from './pages/landing/landing.component';
 import { EventInfoComponent } from './pages/event-info/event-info.component';
 import { BuyRequestComponent } from './pages/buy-request/buy-request.component';
 import { BuyConfirmComponent } from './pages/buy-confirm/buy-confirm.component';
+import { PublisherEventComponent } from './pages/publisher-event/publisher-event.component';
 
 const routes: Routes = [
   {
@@ -19,8 +20,12 @@ const routes: Routes = [
     component: BuyRequestComponent
   },
   {
-    path: "",
+    path: "holis",
     component: BuyConfirmComponent
+  },
+  {
+    path: "",
+    component: PublisherEventComponent
   } 
 ];
 
