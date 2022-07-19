@@ -1,0 +1,38 @@
+.header{
+    border: 0.4px solid #A1A1A1;
+}
+
+.txt-pu{
+    margin-top: 8px;
+    padding-right: 20px; 
+}
+
+.navbar{
+    padding: 20px 0px 25px 0px;
+
+}
+
+.mini-menu{
+    border: 1px solid var(--ibu-color-gray);
+    border-radius: 35px;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+
+    width: fit-content;
+}
+
+.mini-menu i{
+    padding: 0px 7px;
+    gap: 11px;
+}
+
+.dropdown{
+    background: transparent;
+    border: 0;
+}
+
+.dro-m{
+    justify-content: right;
+    margin-left: 88%;
+}
