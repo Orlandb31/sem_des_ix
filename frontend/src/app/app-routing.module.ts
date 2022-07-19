@@ -5,11 +5,11 @@ import { PublisherEventComponent } from './pages/publisher-event/publisher-event
 
 const routes: Routes = [
   {
-    path: "",
+    path: "a",
     component: LandingComponent
   },
   {
-    path: "publishevent",
+    path: "",
     component: PublisherEventComponent
   }
 ];
