@@ -1,0 +1,43 @@
+<app-navbar> </app-navbar>
+
+<div class="container">
+    <div class="row ">
+      <div class="l">
+        <h2 class="black publicarEvento mt-5 pb-5">Publicar evento</h2>
+        <h3 class="black informacionDelEvento mt-5"> Informacion del Evento</h3>
+        <div class="inputposition mt-5">
+            <input type="text" class="input-with-border mb-2 generalInput" id="exampleFormControlInput1" placeholder="Nombre de evento">
+            <input type="text" class="input-with-border mb-2 generalInput" id="exampleFormControlInput1" placeholder="Breve descripcion">
+    
+                <input list="browsers" name="browser" id="browser" class="input-with-border mb-2 generalInput" placeholder="Categoria">
+                <datalist id="browsers">
+                    <option value="Musical">
+                    <option value="Deporte">
+                    <option value="Teatro">
+                    <option value="Discoteca">
+                    <option value="Evento Privado">
+                </datalist>
+                <input type="text" class="input-with-border mb-2 generalInput" id="exampleFormControlInput1" placeholder="Imagen del evento">
+    
+                <h3 class="black informacionDelEvento mt-5">Datos del Evento</h3>
+                
+                <input type="date" class="input-with-border mt-3 mb-2 generalInput2" id="exampleFormControlInput1" placeholder="Dia">
+                <input type="time" class="input-with-border inputHora generalInput2" id="exampleFormControlInput1" placeholder="hora">
+    
+                <input list="eventypes" name="eventype" id="eventype" class="input-with-border mb-2 mt-2 generalInput" placeholder="Tipo de evento">
+                <datalist id="eventypes">
+                    <option value="Evento Publico">
+                    <option value="Evento Privado">
+                </datalist>
+                <input type="number" class="input-with-border inputHora generalInput2" id="exampleFormControlInput1" placeholder="Cantidad de entradas">
+        </div>
+      </div>
+      <div class="r">
+        <h3 class="black informacionDelEvento mt-5"> Ubicacion</h3>
+        <div class="map mt-5"></div>
+        <button type="button" class="button-gradient mt-5">Descargar entradas</button>
+      </div>
+    </div>
+  </div>
+<app-footer></app-footer>
+
