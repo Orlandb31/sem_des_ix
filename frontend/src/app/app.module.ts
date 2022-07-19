@@ -10,6 +10,8 @@ import { LandingComponent } from './pages/landing/landing.component';
 import { EventInfoComponent } from './pages/event-info/event-info.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { BuyRequestComponent } from './pages/buy-request/buy-request.component';
+import { BuyConfirmComponent } from './pages/buy-confirm/buy-confirm.component';
 
 
 @NgModule({
@@ -22,6 +24,8 @@ import { FooterComponent } from './components/footer/footer.component';
     EventInfoComponent,
     NavbarComponent,
     FooterComponent,
+    BuyRequestComponent,
+    BuyConfirmComponent,
   ],
   imports: [
     BrowserModule,
