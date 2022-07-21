@@ -5,6 +5,7 @@ import { EventInfoComponent } from './pages/event-info/event-info.component';
 import { BuyRequestComponent } from './pages/buy-request/buy-request.component';
 import { BuyConfirmComponent } from './pages/buy-confirm/buy-confirm.component';
 import { PublisherEventComponent } from './pages/publisher-event/publisher-event.component';
+import { MapComponent } from './pages/map/map.component';
 
 const routes: Routes = [
   {
@@ -24,8 +25,12 @@ const routes: Routes = [
     component: BuyConfirmComponent
   },
   {
-    path: "",
+    path: "holid",
     component: PublisherEventComponent
+  },
+  {
+    path: "",
+    component: MapComponent
   } 
 ];
 

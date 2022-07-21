@@ -12,6 +12,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BuyRequestComponent } from './pages/buy-request/buy-request.component';
 import { BuyConfirmComponent } from './pages/buy-confirm/buy-confirm.component';
+import { MapComponent } from './pages/map/map.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { BuyConfirmComponent } from './pages/buy-confirm/buy-confirm.component';
     FooterComponent,
     BuyRequestComponent,
     BuyConfirmComponent,
+    MapComponent,
   ],
   imports: [
     BrowserModule,
