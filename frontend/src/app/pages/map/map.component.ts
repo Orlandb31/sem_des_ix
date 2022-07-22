@@ -16,6 +16,7 @@ export class MapComponent implements OnInit {
   style = 'mapbox://styles/mapbox/streets-v11';
   lat = 8.981768537699347;
   lng = -79.52259313474727;
+
   constructor() { }
 
   ngOnInit(): void {

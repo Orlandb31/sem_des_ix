@@ -8,28 +8,29 @@ import { PublisherEventComponent } from './pages/publisher-event/publisher-event
 import { MapComponent } from './pages/map/map.component';
 
 const routes: Routes = [
+  
   {
-    path: "hola",
+    path: "",
     component: LandingComponent
   },
   {
-    path: "holis",
+    path: "eventinfo",
     component: EventInfoComponent
   },
   {
-    path: "holis2",
+    path: "payrequest",
     component: BuyRequestComponent
   },
   {
-    path: "holis",
+    path: "payconfirm",
     component: BuyConfirmComponent
   },
   {
-    path: "holid",
+    path: "publishevent",
     component: PublisherEventComponent
   },
   {
-    path: "",
+    path: "map",
     component: MapComponent
   } 
 ];

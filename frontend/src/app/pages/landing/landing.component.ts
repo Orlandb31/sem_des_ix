@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalSwitchService } from '../../services/modal-switch.service'
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-landing',
@@ -11,7 +12,7 @@ export class LandingComponent implements OnInit {
   modalSignin:boolean;
   modalSignup: boolean;
 
-  constructor( private modalSign: ModalSwitchService ) {
+  constructor( private modalSign: ModalSwitchService, private router: Router ) {
     this.modalSignin = false
     this.modalSignup = false
    }
@@ -27,6 +28,16 @@ export class LandingComponent implements OnInit {
 
   openSignup() {
     this.modalSignup = true
+  }
+
+  publshVerify(){
+    if (localStorage.getItem('token')){
+      this.router.navigate(['/publishevent'])
+    }else { 
+      this.openSignin()
+    }
+      
+    // localStorage.setItem('token', res.token);
   }
 
 }
