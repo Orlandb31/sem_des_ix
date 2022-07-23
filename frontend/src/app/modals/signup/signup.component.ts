@@ -33,7 +33,7 @@ export class SignupComponent implements OnInit {
           localStorage.setItem('token', res.token);
           this.router.navigate(['/publishevent']);
         },
-        err => { console.log("Error")}
+        err => { console.error("Error")}
       )
   }
 

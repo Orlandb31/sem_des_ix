@@ -1,3 +1,4 @@
+import { AuthService } from './../../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { ModalSwitchService } from '../../services/modal-switch.service'
 import { Router } from '@angular/router'
@@ -12,7 +13,7 @@ export class LandingComponent implements OnInit {
   modalSignin:boolean;
   modalSignup: boolean;
 
-  constructor( private modalSign: ModalSwitchService, private router: Router ) {
+  constructor( private modalSign: ModalSwitchService, private router: Router, public authService: AuthService ) {
     this.modalSignin = false
     this.modalSignup = false
    }
@@ -30,14 +31,14 @@ export class LandingComponent implements OnInit {
     this.modalSignup = true
   }
 
-  publshVerify(){
-    if (localStorage.getItem('token')){
-      this.router.navigate(['/publishevent'])
-    }else { 
-      this.openSignin()
-    }
+  // publshVerify(){
+  //   if (localStorage.getItem('token')){
+  //     this.router.navigate(['/publishevent'])
+  //   }else { 
+  //     this.openSignin()
+  //   }
       
-    // localStorage.setItem('token', res.token);
-  }
+  //   // localStorage.setItem('token', res.token);
+  // }
 
 }
