@@ -40,8 +40,17 @@ const eventSchema = mongoose.Schema({
   lat: {
     type: String,
     required: false
+  },
+  imgUrl: {
+    type: String,
+    required: false
+  },
+  nameImg:{
+    type: String,
+    required: false
   }
   
 });
+
 
 module.exports = mongoose.model('Event', eventSchema);
