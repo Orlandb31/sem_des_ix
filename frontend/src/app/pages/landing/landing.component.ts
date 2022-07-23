@@ -1,7 +1,10 @@
+import { element } from 'protractor';
 import { AuthService } from './../../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { ModalSwitchService } from '../../services/modal-switch.service'
+import { PublicPagesService } from '../../services/public-pages.service'
 import { Router } from '@angular/router'
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-landing',
@@ -10,10 +13,18 @@ import { Router } from '@angular/router'
 })
 export class LandingComponent implements OnInit {
   
-  modalSignin:boolean;
+  modalSignin: boolean;
   modalSignup: boolean;
+  data: any
+  finalData: any
+  listenForm: FormControl = new FormControl()
 
-  constructor( private modalSign: ModalSwitchService, private router: Router, public authService: AuthService ) {
+  constructor( 
+    private modalSign: ModalSwitchService,
+    private router: Router, 
+    public authService: AuthService, 
+    private publicPagesService: PublicPagesService 
+    ) {
     this.modalSignin = false
     this.modalSignup = false
    }
@@ -21,6 +32,14 @@ export class LandingComponent implements OnInit {
   ngOnInit(): void {
     this.modalSign.$modal.subscribe( (value) => {this.modalSignin = value})
     this.modalSign.$modalSingup.subscribe( (value) => {this.modalSignup = value})
+
+    const $info = this.publicPagesService.getEvents()
+      $info.subscribe(
+        res =>{
+         this.data = res
+         console.log(this.data)
+        } 
+      )
   }
 
   openSignin() {
@@ -31,14 +50,11 @@ export class LandingComponent implements OnInit {
     this.modalSignup = true
   }
 
-  // publshVerify(){
-  //   if (localStorage.getItem('token')){
-  //     this.router.navigate(['/publishevent'])
-  //   }else { 
-  //     this.openSignin()
-  //   }
-      
-  //   // localStorage.setItem('token', res.token);
-  // }
+  openInfo(element: any){
+    localStorage.setItem('event-description', element.description)
+    localStorage.setItem('event-img', element.nameImg)
+    localStorage.setItem('event-name', element.name)
+    this.router.navigate(['eventinfo'])
+  }
 
 }

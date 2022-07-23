@@ -23,6 +23,24 @@ router.post("/create-event", upload.single('image') ,verifyToken, async (req, re
         .catch((error) => res.json({ message: error }))
 });
 
+router.get("/events", (req, res) => {
+    eventSchema
+		.find()
+		.then((data) => res.json(data))
+		.catch((error) => res.json({ message: error }))
+});
+
+router.get("/event/:id", (req, res) => {
+	const { id } = req.params;
+    eventSchema
+		.findById(id)
+		.then((data) => res.json(data))
+		.catch((error) => res.json({ message: error }))
+});
+
+
+
+
 async function verifyToken(req, res, next) {
 	try {
 		if (!req.headers.authorization) {
