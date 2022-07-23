@@ -1,43 +1,91 @@
 <app-navbar> </app-navbar>
 
 <div class="container">
-    <div class="row ">
+  <form (submit)="createEvent()">
+    <div class="row">
       <div class="l">
         <h2 class="black publicarEvento mt-5 pb-5">Publicar evento</h2>
-        <h3 class="black informacionDelEvento mt-5"> Informacion del Evento</h3>
+        <h3 class="black informacionDelEvento mt-5">Informacion del Evento</h3>
         <div class="inputposition mt-5">
-            <input type="text" class="input-with-border mb-2 generalInput" id="exampleFormControlInput1" placeholder="Nombre de evento">
-            <input type="text" class="input-with-border mb-2 generalInput" id="exampleFormControlInput1" placeholder="Breve descripcion">
-    
-                <input list="browsers" name="browser" id="browser" class="input-with-border mb-2 generalInput" placeholder="Categoria">
-                <datalist id="browsers">
-                    <option value="Musical">
-                    <option value="Deporte">
-                    <option value="Teatro">
-                    <option value="Discoteca">
-                    <option value="Evento Privado">
-                </datalist>
-                <input type="text" class="input-with-border mb-2 generalInput" id="exampleFormControlInput1" placeholder="Imagen del evento">
-    
-                <h3 class="black informacionDelEvento mt-5">Datos del Evento</h3>
-                
-                <input type="date" class="input-with-border mt-3 mb-2 generalInput2" id="exampleFormControlInput1" placeholder="Dia">
-                <input type="time" class="input-with-border inputHora generalInput2" id="exampleFormControlInput1" placeholder="hora">
-    
-                <input list="eventypes" name="eventype" id="eventype" class="input-with-border mb-2 mt-2 generalInput" placeholder="Tipo de evento">
-                <datalist id="eventypes">
-                    <option value="Evento Publico">
-                    <option value="Evento Privado">
-                </datalist>
-                <input type="number" class="input-with-border inputHora generalInput2" id="exampleFormControlInput1" placeholder="Cantidad de entradas">
+          <input
+            type="text"
+            class="input-with-border mb-2 generalInput"
+            [(ngModel)]="event.name"
+            name="name"
+            placeholder="Nombre de evento"
+          />
+          <input
+            type="text"
+            class="input-with-border mb-2 generalInput"
+            [(ngModel)]="event.description"
+            name="description"
+            placeholder="Breve descripcion"
+          />
+          <input
+            list="browsers"
+            class="input-with-border mb-2 generalInput"
+            [(ngModel)]="event.category"
+            name="category"
+            placeholder="Categoria"
+          />
+          <datalist id="browsers">
+            <option value="Musical"></option>
+            <option value="Deporte"></option>
+            <option value="Teatro"></option>
+            <option value="Discoteca"></option>
+            <option value="Evento Privado"></option>
+          </datalist>
+
+          <input
+            type="file"
+            (change)="onChangeFile($event)" 
+            class="form-control rounded-5 input-with-border mb-2 generalInput"
+            placeholder="Imagen del evento"
+          />
+          <h3 class="black informacionDelEvento mt-5">Datos del Evento</h3>
+          <input
+            type="date"
+            class="input-with-border mt-3 mb-2 generalInput2"
+            [(ngModel)]="event.eventDay"
+            name="eventDay"
+            placeholder="Dia"
+          />
+          <input
+            type="time"
+            class="input-with-border inputHora generalInput2"
+            [(ngModel)]="event.eventHour"
+            name="eventHour"
+            placeholder="hora"
+          />
+          <input
+            list="eventypes"
+            class="input-with-border mb-2 mt-2 generalInput"
+            [(ngModel)]="event.city"
+            name="city"
+            placeholder="Ciudad"
+          />
+          <datalist id="eventypes">
+            <option value="Evento Publico"></option>
+            <option value="Evento Privado"></option>
+          </datalist>
+
+          <input
+            type="number"
+            class="input-with-border inputHora generalInput2"
+            [(ngModel)]="event.tickets"
+            name="tickets"
+            placeholder="Cantidad de entradas"
+          />
         </div>
       </div>
       <div class="r">
-        <h3 class="black informacionDelEvento mt-5"> Ubicacion</h3>
+        <h3 class="black informacionDelEvento mt-5">Ubicacion</h3>
         <div class="map mt-5"></div>
-        <button type="button" class="button-gradient mt-5">Descargar entradas</button>
+        <button type="submit" class="button-gradient mt-5">
+          Publicar Evento
+        </button>
       </div>
     </div>
-  </div>
+  </form>
+</div>
 <app-footer></app-footer>
-

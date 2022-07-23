@@ -1,3 +1,5 @@
+import { AuthService } from './services/auth.service';
+import { AuthGuard } from './auth.guard';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LandingComponent } from './pages/landing/landing.component';
@@ -27,7 +29,8 @@ const routes: Routes = [
   },
   {
     path: "publishevent",
-    component: PublisherEventComponent
+    component: PublisherEventComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: "map",

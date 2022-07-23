@@ -15,4 +15,17 @@ export class AuthService {
   signUpUser(user: any) {
     return this.http.post<any>(this.api + '/signup', user);
   }
+
+  loggedIn() {
+    return !!localStorage.getItem('token');
+  }
+
+  getToken() {
+    return localStorage.getItem('token')
+  }
+
+  logout() {
+    localStorage.removeItem('token')
+    this.router.navigate([''])
+  }  
 }
