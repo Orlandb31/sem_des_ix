@@ -3,14 +3,19 @@ const eventSchema = require("../models/Events");
 const router = express.Router();
 const jwt = require('jsonwebtoken');
 const jwt_decode = require('jwt-decode');
+const upload = require('../utils/storage')
 
-router.post("/create-event", verifyToken, async (req, res) => {
+router.post("/create-event", upload.single('image') ,verifyToken, async (req, res) => {
     let decodedToken = jwt_decode(req.headers.authorization)
     let { _id } = decodedToken
     req.body['userId'] = _id
+	
+	console.log(req.file)
+	if(req.file){
+		const { filename } = req.file
+		req.body['imgUrl'] = filename
+	}
 
-	console.log(req.body)
-    
     const event = await eventSchema(req.body);
     event
         .save()
