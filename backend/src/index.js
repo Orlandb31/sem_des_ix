@@ -15,7 +15,7 @@ app.get('/', function (req, res) {
 
 mongoose
     .connect(process.env.MONGODB_URI)
-    .then(() => { console.log("todo cool")})
-    .catch((error) => console.log("Algo salio mal", error))
+    .then(() => { console.log("Inicio Correctamente Iz ")})
+    .catch((error) => console.log("Verg , Algo salio mal", error))
 
 app.listen(3000)
