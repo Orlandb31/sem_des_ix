@@ -37,10 +37,6 @@ const eventSchema = mongoose.Schema({
     type: Number,
     required: false
   },
-  lat: {
-    type: String,
-    required: false
-  },
   imgUrl: {
     type: String,
     required: false
@@ -52,5 +48,6 @@ const eventSchema = mongoose.Schema({
   
 });
 
+//listField---
 
 module.exports = mongoose.model('Event', eventSchema);

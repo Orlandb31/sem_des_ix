@@ -37,7 +37,6 @@ export class LandingComponent implements OnInit {
       $info.subscribe(
         res =>{
          this.data = res
-         console.log(this.data)
         } 
       )
   }
