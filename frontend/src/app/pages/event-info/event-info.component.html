@@ -3,12 +3,12 @@
     <div class="d-flex">
         <div class="flex-column div-left d-flex">
             <div class="container">
-                <h1 class="pb-3">Descripcion breve del evento</h1>
+                <h1 class="pb-3">{{ description }}</h1>
             </div>
-            <button type="button" class="button-gradient">Comprar entradas</button>
+            <button type="button" (click)="buyRequest()" class="button-gradient">Comprar entradas</button>
         </div>
         <div class="flex-fill div-r">
-            <img src="../../../assets/img/example.jpg" alt="">
+            <img src="http://localhost:3000/public/{{ img }}" alt="">
         </div>
     </div>
 </div>

@@ -78,34 +78,16 @@
         </div>
       </div>
       <div class="publish container d-flex">
-        <div class="card mt-5" style="width: 18rem;">
-          <img src="../assets/img/example.jpg" class="card-img-top" alt="...">
+        <div *ngFor="let element of data" class="card mt-5" style="width: 18rem;">
+          <a (click)="openInfo(element)"> <img src="http://localhost:3000/public/{{element.nameImg}}" class="card-img-top" alt="..."> </a>
           <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
-        <div class="card mt-5" style="width: 18rem;">
-          <img src="../assets/img/example.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
-        <div class="card mt-5" style="width: 18rem;">
-          <img src="../assets/img/example.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
-        <div class="card mt-5" style="width: 18rem;">
-          <img src="../assets/img/example.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text">{{ element.name}} </p>
           </div>
         </div>
       </div>    
     </section>
     <div class="container mt-5 mb-5 d-flex justify-content-center">
-      <button type="button" class="btn btn-map bg-black"> Mostrar Mapa <i class="bi bi-map white ps-2"></i></button>
+      <button type="button" class="btn btn-map bg-black" routerLink="map"> Mostrar Mapa <i class="bi bi-map white ps-2"></i></button>
     </div>
 </main>
 <footer class="footer container-fluid bg-white-2">
