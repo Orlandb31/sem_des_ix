@@ -16,6 +16,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { BuyRequestComponent } from './pages/buy-request/buy-request.component';
 import { BuyConfirmComponent } from './pages/buy-confirm/buy-confirm.component';
 import { MapComponent } from './pages/map/map.component';
+import { EventupdateComponent } from './eventupdate/eventupdate.component';
+import { MyeventsComponent } from './myevents/myevents.component';
+import { EventreserveComponent } from './eventreserve/eventreserve.component';
 
 
 @NgModule({
@@ -31,6 +34,9 @@ import { MapComponent } from './pages/map/map.component';
     BuyRequestComponent,
     BuyConfirmComponent,
     MapComponent,
+    EventupdateComponent,
+    MyeventsComponent,
+    EventreserveComponent,
   ],
   imports: [
     BrowserModule,

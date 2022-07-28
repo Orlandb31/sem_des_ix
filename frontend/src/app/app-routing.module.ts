@@ -6,6 +6,9 @@ import { BuyRequestComponent } from './pages/buy-request/buy-request.component';
 import { BuyConfirmComponent } from './pages/buy-confirm/buy-confirm.component';
 import { PublisherEventComponent } from './pages/publisher-event/publisher-event.component';
 import { MapComponent } from './pages/map/map.component';
+import { EventupdateComponent } from './eventupdate/eventupdate.component';
+import { MyeventsComponent } from './myevents/myevents.component';
+import { EventreserveComponent } from './eventreserve/eventreserve.component';
 
 const routes: Routes = [
   
@@ -32,7 +35,20 @@ const routes: Routes = [
   {
     path: "map",
     component: MapComponent
-  } 
+  },
+  {
+    path: "eventupdate",
+    component: EventupdateComponent
+  },
+  {
+    path: "myevents",
+    component: MyeventsComponent
+  },
+  {
+    path: "eventreserve",
+    component: EventreserveComponent
+  }
+
 ];
 
 @NgModule({
