@@ -1,5 +1,39 @@
 <app-navbar></app-navbar>
-    <div class="">
-        <div class="map" id="map" class="match-parent"></div>
+<div class="filter-bar container d-flex justify-content-center">
+    <div class="filter-item">
+      <a (click)="eventCategory('Musical')"><i class="bi bi-vinyl-fill"></i>
+        <span>Musica</span></a>
     </div>
+    <div class="filter-item">
+      <a (click)="eventCategory('Educacion')"><i class="bi bi-book"></i>
+      <span>Educación</span></a>
+    </div>
+    <div class="filter-item">
+      <a (click)="eventCategory('Deporte')"><i class="bi bi-bicycle"></i>
+      <span>Deporte</span></a>
+    </div>
+    <div class="filter-item">
+      <a (click)="eventCategory('Arte')"><i class="bi bi-brush-fill"></i>
+      <span>Arte</span></a>
+    </div>
+    <div class="filter-item">
+      <a (click)="eventCategory('Finanzas')"><i class="bi bi-graph-up"></i>
+      <span>Finanzas</span></a>
+    </div>
+    <div class="filter-item">
+      <a (click)="eventCategory('Compras')"><i class="bi bi-cart3"></i>
+      <span>Compras</span></a>
+    </div>
+    <div class="filter-item">
+      <a (click)="eventCategory('Gaming')"><i class="bi bi-controller"></i>
+      <span>Gaming</span></a>
+    </div>
+    <div class="filter-item">
+      <a (click)="eventCategory('Cine')"><i class="bi bi-camera-video"></i>
+      <span>Cine</span></a>
+    </div>
+</div>
+<div class="">
+    <div class="map" id="map" class="match-parent"></div>
+</div>
 <app-footer></app-footer>

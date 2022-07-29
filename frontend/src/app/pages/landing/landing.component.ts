@@ -49,6 +49,16 @@ export class LandingComponent implements OnInit {
     this.modalSignup = true
   }
 
+  eventCategory(element: any){
+    this.publicPagesService.getEventCategory(element)
+      .subscribe(
+        res => { 
+          console.log(res)
+          this.data = res
+        }
+      )
+  }
+
   openInfo(element: any){
     localStorage.setItem('event-description', element.description)
     localStorage.setItem('event-img', element.nameImg)

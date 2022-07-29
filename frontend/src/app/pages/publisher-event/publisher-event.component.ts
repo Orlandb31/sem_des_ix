@@ -16,7 +16,7 @@ export class PublisherEventComponent implements OnInit {
   map!: mapboxgl.Map;
   style = 'mapbox://styles/mapbox/streets-v11';
   lat = 8.981768537699347;
-  lng = -79.52259313474727;
+  lng = -79.52259313474727;;
 
   event = {
     "createDate": "",
@@ -25,11 +25,14 @@ export class PublisherEventComponent implements OnInit {
     "description":"",
     "eventDay":"",
     "eventHour": "",
-    "tickets": 0,
+    "tickets":0,
     "city":"",
     "nameImg":"",
     "lng":"",
-    "lat":""
+    "lat":"",
+    "state":"Active",
+    "price":0,
+    "invent":0
   }
 
   fileName = '';
@@ -46,6 +49,7 @@ export class PublisherEventComponent implements OnInit {
     });
     this.map.addControl(new mapboxgl.NavigationControl());
     this.createMarker(this.lng, this.lat)
+    
   }
 
   createMarker(lng: number, lat: number){
@@ -55,13 +59,12 @@ export class PublisherEventComponent implements OnInit {
       .addTo(this.map)
 
     marker.on('dragend', () => {
-      console.log(marker.getLngLat())
-      console.log("Lat",lat )
-      console.log("Long", lng)
+      this.lng = marker.getLngLat().lng
+      this.lat = marker.getLngLat().lat
+      console.log(this.lat)
     }) 
   }
   
-
   onChangeFile(event: any) {
     const file:File = event.target.files[0];
     if(file){
@@ -75,16 +78,30 @@ export class PublisherEventComponent implements OnInit {
         res =>{
           console.log("Resouesta", res)
           localStorage.setItem('img', res.imgUrl)
+          localStorage.setItem('img_id_temp', res._id)
+          this.deleteEvenTemp()
         }
       );
     }
   }
 
+  deleteEvenTemp(){
+    this.privatePageServices.deleteEvent(localStorage.getItem('img_id_temp'))
+      .subscribe(
+        res =>{
+          console.log(res)
+        }
+      )
+  }
+
   createEvent() {
+    console.log(this.lng)
     const locals = localStorage.getItem('img')
     this.event.nameImg = `${locals}`
     this.event.lng = `${this.lng}`
     this.event.lat = `${this.lat}`
+    console.log(this.event.lat)
+    this.event.invent = this.event.tickets
 
     console.log(this.event)
     this.privatePageServices.createEvent(this.event)
