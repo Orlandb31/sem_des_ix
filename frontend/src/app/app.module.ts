@@ -17,6 +17,9 @@ import { BuyRequestComponent } from './pages/buy-request/buy-request.component';
 import { BuyConfirmComponent } from './pages/buy-confirm/buy-confirm.component';
 import { AuthGuard } from './auth.guard';
 import { MapComponent } from './pages/map/map.component';
+import { EventupdateComponent } from './eventupdate/eventupdate.component';
+import { MyeventsComponent } from './myevents/myevents.component';
+import { EventreserveComponent } from './eventreserve/eventreserve.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +34,9 @@ import { MapComponent } from './pages/map/map.component';
     BuyRequestComponent,
     BuyConfirmComponent,
     MapComponent,
+    EventupdateComponent,
+    MyeventsComponent,
+    EventreserveComponent,
   ],
   imports: [
     BrowserModule,
