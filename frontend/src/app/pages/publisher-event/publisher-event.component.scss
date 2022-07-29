@@ -1,57 +1,55 @@
-.l{
-    width: 50%;
+.l {
+  width: 50%;
 }
-.r{
-    width: 50%;
+.r {
+  width: 50%;
 }
-.publicarEvento{
-    /* Publicar evento */
+.publicarEvento {
 
-width: 352px;
-height: 21px;
-left: 189px;
-top: 206px;
+  width: 352px;
+  height: 21px;
+  left: 189px;
+  top: 206px;
 
-font-style: normal;
-font-weight: 700;
-font-size: 36px;
-line-height: 42px;
-
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
 }
 
-.informacionDelEvento{
-    /* Informacion General */
-
-
-
-width: 352px;
-height: 21px;
-left: 189px;
-top: 304px;
-font-style: normal;
-font-weight: 500;
-font-size: 20px;
-line-height: 23px;
+.informacionDelEvento {
+  width: 352px;
+  height: 21px;
+  left: 189px;
+  top: 304px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
 }
 
-.inputposition{
-flex-direction: row;
-width: 30%;
-left: 189px;
+.inputposition {
+  flex-direction: row;
+  width: 30%;
+  left: 189px;
 }
-.generalInput{
-    width: 200%;
+.generalInput {
+  width: 200%;
 }
 
-.generalInput2{
-    width: 100%;
+.generalInput2 {
+  width: 100%;
 }
-.inputHora{
+.inputHora {
+  justify-content: space-between;
+}
+.map {
+  width: 100%;
+  height: 80%;
+}
 
-justify-content: space-between;
-}
-.map{
-    width: 100%;
-    height: 70%;
-    background-color: aquamarine;
+.mapa {
+  width: 100%;
+  height: 100%;
+  bottom: 0;
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-event-info',
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./event-info.component.scss']
 })
 export class EventInfoComponent implements OnInit {
-
-  constructor() { }
+  description: any
+  img: any
+  
+  constructor( private router: Router,) { }
 
   ngOnInit(): void {
+    this.description = localStorage.getItem('event-description')
+    this.img = localStorage.getItem('event-img')
+  }
+
+  buyRequest(){
+    this.router.navigate(['payrequest'])
   }
 
 }

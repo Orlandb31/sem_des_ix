@@ -1,8 +1,8 @@
+import { TokenInterceptorService } from './services/token-interceptor.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
-
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,11 +15,11 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BuyRequestComponent } from './pages/buy-request/buy-request.component';
 import { BuyConfirmComponent } from './pages/buy-confirm/buy-confirm.component';
+import { AuthGuard } from './auth.guard';
 import { MapComponent } from './pages/map/map.component';
 import { EventupdateComponent } from './eventupdate/eventupdate.component';
 import { MyeventsComponent } from './myevents/myevents.component';
 import { EventreserveComponent } from './eventreserve/eventreserve.component';
-
 
 @NgModule({
   declarations: [
@@ -44,7 +44,14 @@ import { EventreserveComponent } from './eventreserve/eventreserve.component';
     FormsModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    AuthGuard,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptorService,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

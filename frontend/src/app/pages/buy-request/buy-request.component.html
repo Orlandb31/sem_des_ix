@@ -12,12 +12,12 @@
             <div class="ibu-card   p-5">
                 <div class="row g-0">
                     <div class="col-md-2 pe-2">
-                      <img src="../../../assets/img/example.jpg" class="img-fluid rounded-start" alt="...">
+                      <img src="http://localhost:3000/public/{{ img }}" class="img-fluid rounded-start" alt="...">
                     </div>
                     <div class="col-md-10">
                       <div class="card-body">
-                        <h5 class="card-title">Titulo del Evento</h5>
-                        <p class="card-text">Descripcion breve del evnto nuevamente</p>
+                        <h5 class="card-title">{{ name }}</h5>
+                        <p class="card-text">{{ description}}</p>
                         <p class="card-text"><small class="text-muted">Panama, Panama</small></p>
                       </div>
                     </div>
@@ -31,7 +31,7 @@
                     <div class="col-6 col-sm-4 fw-semibold">24 USD</div>
                 </div>
             </div>
-            <button type="button" class="button-gradient mt-4">Comprar con Yappy</button>
+            <button type="button" (click)="payWithYappy()" class="button-gradient mt-4">Comprar con Yappy</button>
         </div>
     </div>
 </div>
