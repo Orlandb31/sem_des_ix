@@ -18,9 +18,6 @@ import { BuyConfirmComponent } from './pages/buy-confirm/buy-confirm.component';
 import { AuthGuard } from './auth.guard';
 import { MapComponent } from './pages/map/map.component';
 
-import { GoogleMapsModule } from '@angular/google-maps';
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,14 +31,12 @@ import { GoogleMapsModule } from '@angular/google-maps';
     BuyRequestComponent,
     BuyConfirmComponent,
     MapComponent,
-    GoogleMapsModule
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    GoogleMapsModule
   ],
   providers: [
     AuthGuard,

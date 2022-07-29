@@ -44,6 +44,18 @@ const eventSchema = mongoose.Schema({
   nameImg:{
     type: String,
     required: false
+  },
+  price:{
+    type: Number,
+    required: false
+  },
+  state:{
+    type: String,
+    required: false
+  },
+  invent:{
+    type: Number,
+    required: false
   }
   
 });

@@ -2,7 +2,7 @@
     <div class="navbar container mt-0">
       <img src="../assets/img/ibu-white-logo.svg">
       <nav class="right-navigation d-flex justify-content-end">
-        <a href="#" routerLink="publishevent" class="txt-pu b-font white">Publicar mi evento</a>
+        <a routerLink="publishevent" class="txt-pu b-font white">Publicar mi evento</a>
         <div class="mini-menu bg-white">
           <button type="button" class="dropdown"  id="dropdownMenuButton1" data-bs-toggle="dropdown">
             <i class="bi bi-list black"></i>
@@ -10,14 +10,14 @@
           <i class="bi bi-person-circle gray"></i>
           <ul class="dropdown-menu dro-m" aria-labelledby="dropdownMenuButton1">
             <ng-container *ngIf="!authService.loggedIn(); else loggedIn">
-              <li><a class="dropdown-item" href="#" (click)="openSignin()">Iniciar Sesion</a></li>
-              <li><a class="dropdown-item" href="#" (click)="openSignup()">Registrase</a></li>
+              <li><a class="dropdown-item" (click)="openSignin()">Iniciar Sesion</a></li>
+              <li><a class="dropdown-item" (click)="openSignup()">Registrase</a></li>
             </ng-container>
             <ng-template #loggedIn>
-              <li><a class="dropdown-item" href="#" (click)="openSignin()">Cuenta</a></li>
-              <li><a class="dropdown-item" href="#" (click)="openSignin()">Tickets</a></li>
-              <li><a class="dropdown-item" href="#" (click)="openSignin()">Administrar</a></li>
-              <li><a class="dropdown-item" href="#" (click)="authService.logout()">Cerrar Sesion</a></li>
+              <li><a class="dropdown-item" (click)="openSignin()">Cuenta</a></li>
+              <li><a class="dropdown-item" (click)="openSignin()">Tickets</a></li>
+              <li><a class="dropdown-item" (click)="openSignin()">Administrar</a></li>
+              <li><a class="dropdown-item" (click)="authService.logout()">Cerrar Sesion</a></li>
             </ng-template>
           </ul>
         </div>
@@ -45,35 +45,35 @@
     <section class="publish-page container-fluid">
       <div class="filter-bar container d-flex justify-content-center">
         <div class="filter-item">
-          <a href="#" (click)="eventCategory('Musical')"><i class="bi bi-vinyl-fill"></i>
+          <a (click)="eventCategory('Musical')"><i class="bi bi-vinyl-fill"></i>
           <span>Musica</span></a>
         </div>
         <div class="filter-item">
-          <a href="#" (click)="eventCategory('Educacion')"><i class="bi bi-book"></i>
+          <a (click)="eventCategory('Educacion')"><i class="bi bi-book"></i>
           <span>Educación</span></a>
         </div>
         <div class="filter-item">
-          <a href="#" (click)="eventCategory('Deporte')"><i class="bi bi-bicycle"></i>
+          <a (click)="eventCategory('Deporte')"><i class="bi bi-bicycle"></i>
           <span>Deporte</span></a>
         </div>
         <div class="filter-item">
-          <a href="#" (click)="eventCategory('Arte')"><i class="bi bi-brush-fill"></i>
+          <a (click)="eventCategory('Arte')"><i class="bi bi-brush-fill"></i>
           <span>Arte</span></a>
         </div>
         <div class="filter-item">
-          <a href="#" (click)="eventCategory('Finanzas')"><i class="bi bi-graph-up"></i>
+          <a (click)="eventCategory('Finanzas')"><i class="bi bi-graph-up"></i>
           <span>Finanzas</span></a>
         </div>
         <div class="filter-item">
-          <a href="#" (click)="eventCategory('Compras')"><i class="bi bi-cart3"></i>
+          <a (click)="eventCategory('Compras')"><i class="bi bi-cart3"></i>
           <span>Compras</span></a>
         </div>
         <div class="filter-item">
-          <a href="#" (click)="eventCategory('Gaming')"><i class="bi bi-controller"></i>
+          <a (click)="eventCategory('Gaming')"><i class="bi bi-controller"></i>
           <span>Gaming</span></a>
         </div>
         <div class="filter-item">
-          <a href="#" (click)="eventCategory('Cine')"><i class="bi bi-camera-video"></i>
+          <a (click)="eventCategory('Cine')"><i class="bi bi-camera-video"></i>
           <span>Cine</span></a>
         </div>
       </div>

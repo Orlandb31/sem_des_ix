@@ -1,0 +1,28 @@
+.match-parent {
+    width: 100%;
+    height: 800px;
+}
+
+.popup-img{
+    width: 10;
+}
+
+.filter-bar{
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.filter-item{
+    padding-inline: 60px;
+    width: 20px;
+}
+
+.filter-item i{
+    font-size: 20px;
+    color: var(--ibu-color-gray-2)
+}
+
+.filter-item span{
+    color: var(--ibu-color-gray-2);
+    margin-left: -5px;
+}
