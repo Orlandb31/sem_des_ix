@@ -19,6 +19,10 @@ export class PrivatePagesService {
     return this.http.post<any>(this.api + '/create-event', event);
   }
 
+  deleteEvent(id: any){
+    return this.http.delete<any>(this.api + '/event/' + id);
+  }
+
   payYappy(event: any){
     return this.http.post<any>(this.api + 'pagosbg', event);
   }

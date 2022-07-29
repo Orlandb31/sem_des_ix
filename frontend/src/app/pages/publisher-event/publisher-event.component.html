@@ -30,10 +30,13 @@
           />
           <datalist id="browsers">
             <option value="Musical"></option>
+            <option value="Educacion"></option>
             <option value="Deporte"></option>
-            <option value="Teatro"></option>
-            <option value="Discoteca"></option>
-            <option value="Evento Privado"></option>
+            <option value="Arte"></option>
+            <option value="Finanzas"></option>
+            <option value="Compras"></option>
+            <option value="Gaming"></option>
+            <option value="Cine"></option>
           </datalist>
 
           <input
@@ -45,7 +48,7 @@
           <h3 class="black informacionDelEvento mt-5">Datos del Evento</h3>
           <input
             type="date"
-            class="input-with-border mt-3 mb-2 generalInput2"
+            class="input-with-border mt-2 mb-2 generalInput2"
             [(ngModel)]="event.eventDay"
             name="eventDay"
             placeholder="Dia"
@@ -58,23 +61,30 @@
             placeholder="hora"
           />
           <input
-            list="eventypes"
+            list="ciudad"
             class="input-with-border mb-2 mt-2 generalInput"
             [(ngModel)]="event.city"
             name="city"
             placeholder="Ciudad"
           />
-          <datalist id="eventypes">
-            <option value="Evento Publico"></option>
-            <option value="Evento Privado"></option>
+          <datalist id="ciudad">
+            <option value="Panama"></option>
+            <option value="Colon"></option>
           </datalist>
 
           <input
             type="number"
-            class="input-with-border inputHora generalInput2"
+            class="input-with-border mb-2 mt-2  generalInput2"
             [(ngModel)]="event.tickets"
             name="tickets"
             placeholder="Cantidad de entradas"
+          />
+          <input
+            type="number"
+            class="input-with-border "
+            name="price"
+            [(ngModel)]="event.price"
+            placeholder="Precio"
           />
         </div>
       </div>

@@ -25,11 +25,14 @@ export class PublisherEventComponent implements OnInit {
     "description":"",
     "eventDay":"",
     "eventHour": "",
-    "tickets": 0,
+    "tickets":0,
     "city":"",
     "nameImg":"",
     "lng":"",
-    "lat":""
+    "lat":"",
+    "state":"Active",
+    "price":0,
+    "invent":0
   }
 
   fileName = '';
@@ -61,7 +64,6 @@ export class PublisherEventComponent implements OnInit {
     }) 
   }
   
-
   onChangeFile(event: any) {
     const file:File = event.target.files[0];
     if(file){
@@ -75,9 +77,20 @@ export class PublisherEventComponent implements OnInit {
         res =>{
           console.log("Resouesta", res)
           localStorage.setItem('img', res.imgUrl)
+          localStorage.setItem('img_id_temp', res._id)
+          this.deleteEvenTemp()
         }
       );
     }
+  }
+
+  deleteEvenTemp(){
+    this.privatePageServices.deleteEvent(localStorage.getItem('img_id_temp'))
+      .subscribe(
+        res =>{
+          console.log(res)
+        }
+      )
   }
 
   createEvent() {
@@ -85,6 +98,7 @@ export class PublisherEventComponent implements OnInit {
     this.event.nameImg = `${locals}`
     this.event.lng = `${this.lng}`
     this.event.lat = `${this.lat}`
+    this.event.invent = this.event.tickets
 
     console.log(this.event)
     this.privatePageServices.createEvent(this.event)

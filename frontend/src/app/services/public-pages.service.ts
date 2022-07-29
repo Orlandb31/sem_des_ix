@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
-import { HttpClient } from '@angular/common/http'
+import { HttpClient, HttpHeaders } from '@angular/common/http'
 import { Router } from '@angular/router';
 
 @Injectable({
@@ -20,4 +20,7 @@ export class PublicPagesService {
     return this.http.get(this.api + '/event/' + id);
   }
 
+  getEventCategory(id: any) {
+    return this.http.get(this.api + '/events-category/' + id);
+  }
 }

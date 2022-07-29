@@ -1,6 +1,6 @@
 <header class="header">
     <div class="navbar container mt-0">
-      <img src="../assets/img/ibu-black-logo.svg">
+      <a href="" routerLink="/"> <img src="../assets/img/ibu-black-logo.svg"> </a>
       <nav class="right-navigation d-flex justify-content-end">
         <a href="#" class="txt-pu b-font black">Publicar mi evento</a>
         <div class="mini-menu bg-white">
@@ -9,8 +9,16 @@
           </button>
           <i class="bi bi-person-circle gray"></i>
           <ul class="dropdown-menu dro-m" aria-labelledby="dropdownMenuButton1">
-            <li><a class="dropdown-item" href="#">Iniciar Sesion</a></li>
-            <li><a class="dropdown-item" href="#">Registrase</a></li>
+            <ng-container *ngIf="!authService.loggedIn(); else loggedIn">
+              <li><a class="dropdown-item" href="#" (click)="openSignin()">Iniciar Sesion</a></li>
+              <li><a class="dropdown-item" href="#" (click)="openSignup()">Registrase</a></li>
+            </ng-container>
+            <ng-template #loggedIn>
+              <li><a class="dropdown-item" href="#" (click)="openSignin()">Cuenta</a></li>
+              <li><a class="dropdown-item" href="#" (click)="openSignin()">Tickets</a></li>
+              <li><a class="dropdown-item" href="#" (click)="openSignin()">Administrar</a></li>
+              <li><a class="dropdown-item" href="#" (click)="authService.logout()">Cerrar Sesion</a></li>
+            </ng-template>
           </ul>
         </div>
       </nav>

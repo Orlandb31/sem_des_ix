@@ -45,41 +45,41 @@
     <section class="publish-page container-fluid">
       <div class="filter-bar container d-flex justify-content-center">
         <div class="filter-item">
-          <a href="#"><i class="bi bi-vinyl-fill"></i>
+          <a href="#" (click)="eventCategory('Musical')"><i class="bi bi-vinyl-fill"></i>
           <span>Musica</span></a>
         </div>
         <div class="filter-item">
-          <a href="#"><i class="bi bi-book"></i>
+          <a href="#" (click)="eventCategory('Educacion')"><i class="bi bi-book"></i>
           <span>Educación</span></a>
         </div>
         <div class="filter-item">
-          <a href="#"><i class="bi bi-bicycle"></i>
+          <a href="#" (click)="eventCategory('Deporte')"><i class="bi bi-bicycle"></i>
           <span>Deporte</span></a>
         </div>
         <div class="filter-item">
-          <a href="#"><i class="bi bi-brush-fill"></i>
+          <a href="#" (click)="eventCategory('Arte')"><i class="bi bi-brush-fill"></i>
           <span>Arte</span></a>
         </div>
         <div class="filter-item">
-          <a href="#"><i class="bi bi-graph-up"></i>
+          <a href="#" (click)="eventCategory('Finanzas')"><i class="bi bi-graph-up"></i>
           <span>Finanzas</span></a>
         </div>
         <div class="filter-item">
-          <a href="#"><i class="bi bi-cart3"></i>
+          <a href="#" (click)="eventCategory('Compras')"><i class="bi bi-cart3"></i>
           <span>Compras</span></a>
         </div>
         <div class="filter-item">
-          <a href="#"><i class="bi bi-controller"></i>
-          <span>Juegos</span></a>
+          <a href="#" (click)="eventCategory('Gaming')"><i class="bi bi-controller"></i>
+          <span>Gaming</span></a>
         </div>
         <div class="filter-item">
-          <a href="#"><i class="bi bi-camera-video"></i>
+          <a href="#" (click)="eventCategory('Cine')"><i class="bi bi-camera-video"></i>
           <span>Cine</span></a>
         </div>
       </div>
-      <div class="publish container d-flex">
-        <div *ngFor="let element of data" class="card mt-5" style="width: 18rem;">
-          <a (click)="openInfo(element)"> <img src="http://localhost:3000/public/{{element.nameImg}}" class="card-img-top" alt="..."> </a>
+      <div class="publish container d-flex  flex-wrap" >
+        <div *ngFor="let element of data" class="card mt-5" style="width: 17rem;">
+          <a (click)="openInfo(element)"> <img src="http://localhost:3000/public/{{element.nameImg}}" class="card-img-top img-list" alt="..."> </a>
           <div class="card-body">
             <p class="card-text">{{ element.name}} </p>
           </div>
@@ -87,7 +87,7 @@
       </div>    
     </section>
     <div class="container mt-5 mb-5 d-flex justify-content-center">
-      <button type="button" class="btn btn-map bg-black" routerLink="map"> Mostrar Mapa <i class="bi bi-map white ps-2"></i></button>
+      <button type="button" class="btn btn-map bg-black" routerLink="mapa"> Mostrar Mapa <i class="bi bi-map white ps-2 btn-map"></i></button>
     </div>
 </main>
 <footer class="footer container-fluid bg-white-2">

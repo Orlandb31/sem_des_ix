@@ -15,8 +15,11 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BuyRequestComponent } from './pages/buy-request/buy-request.component';
 import { BuyConfirmComponent } from './pages/buy-confirm/buy-confirm.component';
-import { MapComponent } from './pages/map/map.component';
 import { AuthGuard } from './auth.guard';
+import { MapComponent } from './pages/map/map.component';
+
+import { GoogleMapsModule } from '@angular/google-maps';
+
 
 @NgModule({
   declarations: [
@@ -31,13 +34,14 @@ import { AuthGuard } from './auth.guard';
     BuyRequestComponent,
     BuyConfirmComponent,
     MapComponent,
-
+    GoogleMapsModule
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    GoogleMapsModule
   ],
   providers: [
     AuthGuard,
